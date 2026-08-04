@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import Reveal from '@/components/Reveal';
 import Icon from '@/components/Icons';
@@ -5,6 +6,9 @@ import CtaBand from '@/components/CtaBand';
 import { services } from '@/lib/services';
 import { posts } from '@/lib/posts';
 import { faqGroups } from '@/lib/faq';
+import { site } from '@/lib/site';
+import heroImg from '@/public/images/hero-team.jpg';
+import standardsImg from '@/public/images/standards-desk.jpg';
 
 const steps = [
   { title: 'گفت‌وگوی اولیه', desc: 'نیاز شما و ساختار مالی شرکت را می‌شناسیم.' },
@@ -20,102 +24,66 @@ export default function Home() {
   return (
     <>
       <section className="hero">
-        <div className="digits-bg" aria-hidden="true">
-          <span style={{ fontSize: 280, top: -40, left: '4%' }}>۷</span>
-          <span style={{ fontSize: 200, bottom: -30, right: -20 }}>۳</span>
-          <span style={{ fontSize: 150, top: '40%', left: '38%' }}>۹</span>
-        </div>
         <div className="wrap">
           <Reveal>
             <p className="eyebrow">مؤسسه حسابرسی و خدمات مالی</p>
             <h1>
-              پشتِ هر عددِ درست،
+              حسابرسی و امور مالی شرکت شما،
               <br />
-              یک تصمیمِ <em>خردمندانه</em> است.
+              دستِ <em>حرفه‌ای‌ها</em>.
             </h1>
             <p className="lead">
-              «خردمند محاسب ارقام» با تیمی از حسابداران و حسابرسان باتجربه، حسابرسی
-              صورت‌های مالی، خدمات مالیاتی و مشاوره مالی را با دقت، استقلال و محرمانگی
-              کامل انجام می‌دهد.
+              از حسابرسی صورت‌های مالی و بازرس قانونی تا امور مالیاتی و حسابداری —
+              گزارش‌هایی که بانک‌ها و سازمان امور مالیاتی می‌پذیرند؛ برای شرکت‌های سراسر
+              ایران.
             </p>
             <div className="cta-row">
               <Link className="btn btn-solid" href="/contact">
                 درخواست مشاوره رایگان
               </Link>
               <Link className="btn btn-ghost" href="/services">
-                آشنایی با خدمات
+                مشاهده خدمات
               </Link>
             </div>
-            <p className="note">
-              <Icon name="clock" />
-              پاسخ‌گویی به درخواست‌ها در کمتر از یک روز کاری
-            </p>
+            <ul className="bullets">
+              <li>
+                <Icon name="check" />
+                جلسه اول رایگان
+              </li>
+              <li>
+                <Icon name="check" />
+                پاسخ در کمتر از یک روز کاری
+              </li>
+              <li>
+                <Icon name="check" />
+                محرمانگی کامل
+              </li>
+            </ul>
           </Reveal>
-          <Reveal className="report-wrap">
-            <div className="report" aria-hidden="true">
-              <div className="rhead">
-                <b>گزارش حسابرس مستقل</b>
-                <span>سال مالی ۱۴۰۴</span>
-              </div>
-              <table>
-                <tbody>
-                  <tr>
-                    <td className="lbl">دارایی‌های جاری</td>
-                    <td className="num">۱۲٬۴۸۰</td>
-                  </tr>
-                  <tr>
-                    <td className="lbl">بدهی‌های جاری</td>
-                    <td className="num">۴٬۹۳۲</td>
-                  </tr>
-                  <tr>
-                    <td className="lbl">حقوق مالکانه</td>
-                    <td className="num">۷٬۵۴۸</td>
-                  </tr>
-                  <tr>
-                    <td className="lbl">سود خالص دوره</td>
-                    <td className="num">۲٬۱۱۶</td>
-                  </tr>
-                </tbody>
-              </table>
-              <div className="verdict">
-                <span className="chip">
-                  <Icon name="check" />
-                  اظهارنظر: مقبول
-                </span>
-                <small>مطابق استانداردهای حسابرسی ایران</small>
-              </div>
+          <Reveal className="hero-media">
+            <Image
+              src={heroImg}
+              alt="جلسه کاری تیم حسابرسی با مدیران شرکت"
+              priority
+              placeholder="blur"
+              sizes="(max-width: 860px) 100vw, 45vw"
+            />
+            <div className="hero-badge">
+              <span className="chip">
+                <Icon name="check" />
+                مطابق استانداردهای حسابرسی ایران
+              </span>
             </div>
           </Reveal>
         </div>
       </section>
 
-      <div className="stats">
-        <div className="wrap">
-          <Reveal className="stat">
-            <b>۱۵+</b>
-            <span>سال تجربه حرفه‌ای</span>
-          </Reveal>
-          <Reveal className="stat">
-            <b>۱۲۰+</b>
-            <span>شرکت و مؤسسه</span>
-          </Reveal>
-          <Reveal className="stat">
-            <b>۴</b>
-            <span>حوزه تخصصی خدمات</span>
-          </Reveal>
-          <Reveal className="stat">
-            <b>۱۰۰٪</b>
-            <span>استقلال و محرمانگی</span>
-          </Reveal>
-        </div>
-      </div>
-
       <section className="block">
         <div className="wrap">
           <Reveal className="sec-head">
             <p className="eyebrow">خدمات مؤسسه</p>
-            <h2>چهار حوزه، یک استاندارد: دقت.</h2>
-            <p>از حسابرسی قانونی تا مشاوره مالی — هر خدمت با همان سخت‌گیری حرفه‌ای انجام می‌شود.</p>
+            <h2>چه کمکی از ما برمی‌آید؟</h2>
+            <p>چهار حوزه خدمت — روی هر کدام بزنید تا جزئیات، مخاطبان و خروجی آن را ببینید.</p>
           </Reveal>
           <div className="services">
             {services.map((s) => (
@@ -135,6 +103,54 @@ export default function Home() {
       </section>
 
       <section className="block on-surface">
+        <div className="wrap split">
+          <Reveal className="split-media">
+            <Image
+              src={standardsImg}
+              alt="اسناد مالی و ماشین‌حساب روی میز کار حسابرسی"
+              placeholder="blur"
+              sizes="(max-width: 860px) 100vw, 45vw"
+            />
+          </Reveal>
+          <Reveal className="split-body">
+            <p className="eyebrow">استانداردهای حسابرسی</p>
+            <h2>مبنای کار ما استاندارد است، نه سلیقه.</h2>
+            <p>
+              تمام رسیدگی‌ها طبق استانداردهای حسابرسی ایران — از برنامه‌ریزی و
+              نمونه‌گیری تا اظهارنظر نهایی — انجام می‌شود. به همین دلیل گزارش‌های مؤسسه
+              برای بانک‌ها و مراجع نظارتی قابل استناد است.
+            </p>
+            <div className="sec-foot">
+              <Link className="btn btn-ghost" href="/standards">
+                آشنایی با استانداردها ←
+              </Link>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <div className="stats">
+        <div className="wrap">
+          <Reveal className="stat">
+            <b className="display-num">۱۵+</b>
+            <span>سال تجربه حرفه‌ای</span>
+          </Reveal>
+          <Reveal className="stat">
+            <b className="display-num">۱۲۰+</b>
+            <span>شرکت و مؤسسه</span>
+          </Reveal>
+          <Reveal className="stat">
+            <b className="display-num">۴</b>
+            <span>حوزه تخصصی خدمات</span>
+          </Reveal>
+          <Reveal className="stat">
+            <b className="display-num">۱۰۰٪</b>
+            <span>استقلال و محرمانگی</span>
+          </Reveal>
+        </div>
+      </div>
+
+      <section className="block">
         <div className="wrap">
           <Reveal className="sec-head">
             <p className="eyebrow">فرایند همکاری</p>
@@ -143,7 +159,7 @@ export default function Home() {
           <div className="steps">
             {steps.map((st, i) => (
               <Reveal className="step" key={st.title}>
-                <span className="no">{['۱', '۲', '۳', '۴', '۵'][i]}</span>
+                <span className="no display-num">{['۱', '۲', '۳', '۴', '۵'][i]}</span>
                 <h3>{st.title}</h3>
                 <p>{st.desc}</p>
               </Reveal>
