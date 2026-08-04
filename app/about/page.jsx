@@ -1,6 +1,8 @@
+import Image from 'next/image';
 import PageIntro from '@/components/PageIntro';
 import Reveal from '@/components/Reveal';
 import CtaBand from '@/components/CtaBand';
+import { aboutImage } from '@/lib/images';
 
 export const metadata = {
   title: 'درباره ما',
@@ -44,8 +46,16 @@ export default function AboutPage() {
         lead="مؤسسه حسابرسی و خدمات مالی — تیمی که اعتقاد دارد پشت هر عدد درست، یک تصمیم خردمندانه است."
       />
       <section className="block">
-        <div className="wrap prose">
-          <Reveal>
+        <div className="wrap split">
+          <Reveal className="split-media">
+            <Image
+              src={aboutImage.src}
+              alt={aboutImage.alt}
+              placeholder="blur"
+              sizes="(max-width: 860px) 100vw, 45vw"
+            />
+          </Reveal>
+          <Reveal className="split-body">
             <p>
               «خردمند محاسب ارقام» با هدف ارائه خدمات حسابرسی و مالی دقیق، مستقل و
               قابل‌اتکا برای شرکت‌های ایرانی شکل گرفته است. تیم مؤسسه از حسابداران رسمی و

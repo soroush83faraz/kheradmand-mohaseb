@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Reveal from '@/components/Reveal';
 import Icon from '@/components/Icons';
 import CtaBand from '@/components/CtaBand';
+import PostCard from '@/components/PostCard';
 import { services } from '@/lib/services';
 import { posts } from '@/lib/posts';
 import { faqGroups } from '@/lib/faq';
@@ -215,12 +216,7 @@ export default function Home() {
           <div className="posts">
             {posts.slice(0, 3).map((p) => (
               <Reveal key={p.slug}>
-                <Link className="post" href={`/blog/${p.slug}`} style={{ height: '100%' }}>
-                  <span className="cat">{p.category}</span>
-                  <h3>{p.title}</h3>
-                  <p>{p.excerpt}</p>
-                  <time>{p.date}</time>
-                </Link>
+                <PostCard post={p} />
               </Reveal>
             ))}
           </div>

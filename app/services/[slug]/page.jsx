@@ -1,9 +1,11 @@
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import PageIntro from '@/components/PageIntro';
 import Reveal from '@/components/Reveal';
 import Icon from '@/components/Icons';
 import CtaBand from '@/components/CtaBand';
 import { services, getService } from '@/lib/services';
+import { serviceImages } from '@/lib/images';
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -26,6 +28,17 @@ export default async function ServicePage({ params }) {
       <PageIntro eyebrow="خدمات مؤسسه" title={service.title} lead={service.lead} />
       <section className="block">
         <div className="wrap svc-detail">
+          {serviceImages[service.slug] ? (
+            <Reveal className="svc-img">
+              <Image
+                src={serviceImages[service.slug].src}
+                alt={serviceImages[service.slug].alt}
+                priority
+                placeholder="blur"
+                sizes="(max-width: 860px) 100vw, 760px"
+              />
+            </Reveal>
+          ) : null}
           <Reveal className="intro">
             {service.intro.map((p) => (
               <p key={p}>{p}</p>

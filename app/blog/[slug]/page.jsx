@@ -1,7 +1,9 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import CtaBand from '@/components/CtaBand';
 import { posts, getPost } from '@/lib/posts';
+import { postImages } from '@/lib/images';
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
@@ -40,6 +42,17 @@ export default async function PostPage({ params }) {
           <time dateTime={post.iso}>{post.date}</time>
         </div>
         <h1>{post.title}</h1>
+        {postImages[post.slug] ? (
+          <div className="article-img">
+            <Image
+              src={postImages[post.slug].src}
+              alt={postImages[post.slug].alt}
+              priority
+              placeholder="blur"
+              sizes="(max-width: 860px) 100vw, 720px"
+            />
+          </div>
+        ) : null}
         <div className="article-body">
           {post.body.map((block, i) => (
             <Block key={i} block={block} />

@@ -833,11 +833,30 @@ a.svc {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 8px;
-  padding: 26px 24px;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.post-img {
+  display: block;
+}
+
+.post-img img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+}
+
+.post-body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  padding: 22px 22px 24px;
+  flex: 1;
 }
 
 .post:hover {
@@ -1237,6 +1256,39 @@ a.svc {
   .fgrid {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+/* content images (article, service, contact) */
+.article-img img,
+.svc-img img,
+.contact-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  display: block;
+}
+
+.article-img {
+  margin-block-end: 28px;
+}
+
+.svc-img {
+  margin-block-end: 28px;
+}
+
+.svc-img img {
+  max-height: 340px;
+  object-fit: cover;
+}
+
+.contact-img {
+  margin-block-end: 20px;
+}
+
+.contact-img img {
+  max-height: 220px;
+  object-fit: cover;
 }
 
 /* hero media + trust bullets */
