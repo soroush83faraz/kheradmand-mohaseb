@@ -1,8 +1,12 @@
 # خردمند محاسب ارقام — وب‌سایت مؤسسه حسابرسی
 
+[![پیش‌نمایش سایت خردمند محاسب ارقام](assets/demo.gif)](https://soroush83faraz.github.io/kheradmand-mohaseb/)
+
 ## 🌐 [مشاهده سایت — کلیک کنید](https://soroush83faraz.github.io/kheradmand-mohaseb/)
 
 سایت معرفی مؤسسه حسابرسی و خدمات مالی «خردمند محاسب ارقام» — ساخته‌شده با Next.js (خروجی استاتیک).
+
+نسخه ویدیویی پیش‌نمایش: [`assets/demo.mp4`](assets/demo.mp4)
 
 ## اجرا در محیط توسعه
 
