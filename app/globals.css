@@ -48,7 +48,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: var(--font-vazir), 'Segoe UI', Tahoma, sans-serif;
+  font-family: var(--font-body), 'Segoe UI', Tahoma, sans-serif;
   font-size: 1.0625rem;
   line-height: 1.95;
   font-feature-settings: 'kern', 'liga', 'calt';
@@ -61,7 +61,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-estedad), var(--font-vazir), Tahoma, sans-serif;
+  font-family: var(--font-display), var(--font-body), Tahoma, sans-serif;
   font-weight: 700;
   line-height: 1.55;
   margin: 0;
@@ -84,7 +84,7 @@ textarea {
 }
 
 .display-num {
-  font-family: var(--font-estedad), var(--font-vazir), sans-serif;
+  font-family: var(--font-display), var(--font-body), sans-serif;
 }
 
 p {
@@ -110,7 +110,7 @@ ul {
 }
 
 .wrap {
-  max-width: 1140px;
+  max-width: 1240px;
   margin-inline: auto;
   padding-inline: 24px;
 }
@@ -141,7 +141,7 @@ ul {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: var(--font-vazir), sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 0.9375rem;
   font-weight: 600;
   padding: 10px 22px;
@@ -207,7 +207,7 @@ ul {
 }
 
 .brand .name {
-  font-family: var(--font-estedad), sans-serif;
+  font-family: var(--font-display), sans-serif;
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.3;
@@ -390,7 +390,7 @@ nav.menu a.active {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  font-family: var(--font-estedad), sans-serif;
+  font-family: var(--font-display), sans-serif;
   font-weight: 700;
   color: var(--ink);
   opacity: 0.04;
@@ -424,7 +424,7 @@ nav.menu a.active {
 }
 
 .report .rhead b {
-  font-family: var(--font-estedad), sans-serif;
+  font-family: var(--font-display), sans-serif;
   font-size: 0.9375rem;
   font-weight: 700;
 }
@@ -524,7 +524,7 @@ nav.menu a.active {
 }
 
 .stat b {
-  font-family: var(--font-estedad), sans-serif;
+  font-family: var(--font-display), sans-serif;
   font-size: 1.7rem;
   font-weight: 700;
   color: var(--ink);
@@ -582,21 +582,34 @@ section.block {
 }
 
 .page-intro .wrap {
-  padding-block: 56px 48px;
-  max-width: 900px;
+  padding-block: 64px 56px;
+}
+
+.page-intro .wrap > * {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  column-gap: 64px;
+  align-items: end;
 }
 
 .page-intro h1 {
-  font-size: clamp(1.9rem, 4vw, 2.75rem);
+  font-size: clamp(2rem, 4.2vw, 3rem);
   font-weight: 700;
-  margin-block-start: 14px;
+  line-height: 1.45;
 }
 
 .page-intro .lead {
   color: var(--ink-2);
-  font-size: 1rem;
-  margin-block-start: 14px;
-  max-width: 42rem;
+  font-size: 1.0625rem;
+  max-width: 38rem;
+  padding-block-end: 6px;
+}
+
+@media (max-width: 860px) {
+  .page-intro .wrap > * {
+    grid-template-columns: 1fr;
+    row-gap: 14px;
+  }
 }
 
 /* services */
@@ -693,7 +706,7 @@ a.svc {
 }
 
 .step .no {
-  font-family: var(--font-estedad), sans-serif;
+  font-family: var(--font-display), sans-serif;
   font-size: 2rem;
   font-weight: 700;
   color: var(--accent);
@@ -765,7 +778,7 @@ a.svc {
 }
 
 .step-row .no {
-  font-family: var(--font-estedad), sans-serif;
+  font-family: var(--font-display), sans-serif;
   font-size: 2.2rem;
   font-weight: 700;
   color: var(--accent);
@@ -974,18 +987,47 @@ a.svc {
 }
 
 /* faq */
-.faq {
-  max-width: 760px;
+.faq-group,
+.std-group {
+  display: grid;
+  grid-template-columns: minmax(200px, 300px) minmax(0, 1fr);
+  column-gap: 72px;
+  align-items: start;
+  margin-block-end: 56px;
 }
 
-.faq-group {
-  margin-block-end: 44px;
+.faq-group > h2,
+.std-group > h2 {
+  grid-column: 1;
+  grid-row: 1 / span 40;
+  position: sticky;
+  top: 104px;
+  font-size: 1.35rem;
+  line-height: 1.6;
+  margin: 0;
+  padding-block-start: 14px;
+}
+
+.faq-group > :not(h2),
+.std-group > :not(h2) {
+  grid-column: 2;
+}
+
+@media (max-width: 860px) {
+  .faq-group,
+  .std-group {
+    display: block;
+  }
+
+  .faq-group > h2,
+  .std-group > h2 {
+    position: static;
+    margin-block-end: 10px;
+  }
 }
 
 .faq-group h2 {
-  font-size: 1.15rem;
   font-weight: 700;
-  margin-block-end: 10px;
   color: var(--accent-ink);
 }
 
@@ -997,7 +1039,7 @@ a.svc {
   cursor: pointer;
   list-style: none;
   padding-block: 18px;
-  font-family: var(--font-vazir), sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-weight: 700;
   font-size: 0.9375rem;
   display: flex;
@@ -1148,7 +1190,7 @@ a.svc {
 
 .contact-form input,
 .contact-form textarea {
-  font-family: var(--font-vazir), sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 0.9375rem;
   padding: 10px 14px;
   border-radius: 6px;
@@ -1399,15 +1441,8 @@ a.svc {
 }
 
 /* standards page */
-.std-group {
-  max-width: 820px;
-  margin-block-end: 44px;
-}
-
 .std-group h2 {
-  font-size: 1.15rem;
   font-weight: 700;
-  margin-block-end: 10px;
   color: var(--accent-ink);
 }
 

@@ -1,20 +1,20 @@
-import localFont from 'next/font/local';
+import { IBM_Plex_Sans_Arabic, Noto_Naskh_Arabic } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { site } from '@/lib/site';
 import './globals.css';
 
-const vazir = localFont({
-  src: './fonts/Vazirmatn.woff2',
-  variable: '--font-vazir',
-  weight: '100 900',
+const plex = IBM_Plex_Sans_Arabic({
+  subsets: ['arabic'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-body',
   display: 'swap',
 });
 
-const estedad = localFont({
-  src: './fonts/Estedad.woff2',
-  variable: '--font-estedad',
-  weight: '100 900',
+const naskh = Noto_Naskh_Arabic({
+  subsets: ['arabic'],
+  weight: ['500', '600', '700'],
+  variable: '--font-display',
   display: 'swap',
 });
 
@@ -30,7 +30,7 @@ const themeInit = `try{if(localStorage.getItem('kma-theme')==='dark')document.do
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fa" dir="rtl" className={`${vazir.variable} ${estedad.variable}`}>
+    <html lang="fa" dir="rtl" className={`${plex.variable} ${naskh.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
       </head>
