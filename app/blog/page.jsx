@@ -13,7 +13,6 @@ export default function BlogPage() {
   return (
     <>
       <PageIntro
-        eyebrow="مقالات و راهنماها"
         title="مطالب تخصصی، به زبان ساده."
         lead="پاسخ روشن به پرسش‌های حسابرسی، مالیات و حسابداری — بدون اصطلاح‌بازی."
       />

@@ -16,7 +16,6 @@ export default function StandardsPage() {
   return (
     <>
       <PageIntro
-        eyebrow="استانداردهای حسابرسی"
         title="مبنای کار ما، استاندارد است؛ نه سلیقه."
         lead="استانداردهای حسابرسی ایران توسط سازمان حسابرسی و بر پایه استانداردهای بین‌المللی (ISA) تدوین شده‌اند. تمام رسیدگی‌های مؤسسه طبق همین استانداردها انجام و گزارش می‌شود."
       />
@@ -71,7 +70,6 @@ export default function StandardsPage() {
       <section className="block">
         <div className="wrap">
           <Reveal className="sec-head">
-            <p className="eyebrow">نتیجه رسیدگی</p>
             <h2>چهار نوع اظهارنظر حسابرس</h2>
             <p>خروجی نهایی هر حسابرسی، یکی از این چهار اظهارنظر است.</p>
           </Reveal>

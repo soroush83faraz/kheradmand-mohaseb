@@ -27,7 +27,6 @@ export default function Home() {
       <section className="hero">
         <div className="wrap">
           <Reveal>
-            <p className="eyebrow">مؤسسه حسابرسی و خدمات مالی</p>
             <h1>
               حسابرسی و امور مالی شرکت شما،
               <br />
@@ -82,7 +81,6 @@ export default function Home() {
       <section className="block">
         <div className="wrap">
           <Reveal className="sec-head">
-            <p className="eyebrow">خدمات مؤسسه</p>
             <h2>چه کمکی از ما برمی‌آید؟</h2>
             <p>چهار حوزه خدمت — روی هر کدام بزنید تا جزئیات، مخاطبان و خروجی آن را ببینید.</p>
           </Reveal>
@@ -114,7 +112,6 @@ export default function Home() {
             />
           </Reveal>
           <Reveal className="split-body">
-            <p className="eyebrow">استانداردهای حسابرسی</p>
             <h2>مبنای کار ما استاندارد است، نه سلیقه.</h2>
             <p>
               تمام رسیدگی‌ها طبق استانداردهای حسابرسی ایران — از برنامه‌ریزی و
@@ -154,7 +151,6 @@ export default function Home() {
       <section className="block">
         <div className="wrap">
           <Reveal className="sec-head">
-            <p className="eyebrow">فرایند همکاری</p>
             <h2>شفاف از روز اول تا تحویل گزارش.</h2>
           </Reveal>
           <div className="steps">
@@ -177,7 +173,6 @@ export default function Home() {
       <section className="block band">
         <div className="wrap">
           <Reveal className="sec-head">
-            <p className="eyebrow">چرا خردمند محاسب ارقام</p>
             <h2>حسابرسی، کارِ اعتماد است.</h2>
           </Reveal>
           <div className="why">
@@ -209,7 +204,6 @@ export default function Home() {
       <section className="block">
         <div className="wrap">
           <Reveal className="sec-head">
-            <p className="eyebrow">مقالات و راهنماها</p>
             <h2>تازه‌ترین مطالب تخصصی</h2>
             <p>پاسخ روشن به پرسش‌های مالی و مالیاتی — به زبان ساده، بدون اصطلاح‌بازی.</p>
           </Reveal>
@@ -231,7 +225,6 @@ export default function Home() {
       <section className="block on-surface">
         <div className="wrap">
           <Reveal className="sec-head">
-            <p className="eyebrow">پرسش‌های متداول</p>
             <h2>پیش از تماس، پاسخ‌ها را ببینید.</h2>
           </Reveal>
           <Reveal className="faq">

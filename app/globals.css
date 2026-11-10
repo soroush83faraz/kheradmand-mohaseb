@@ -49,8 +49,10 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-vazir), 'Segoe UI', Tahoma, sans-serif;
-  font-size: 16px;
-  line-height: 1.9;
+  font-size: 1.0625rem;
+  line-height: 1.95;
+  font-feature-settings: 'kern', 'liga', 'calt';
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   transition: background 0.25s, color 0.25s;
 }
@@ -59,10 +61,26 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-vazir), Tahoma, sans-serif;
-  line-height: 1.6;
+  font-family: var(--font-estedad), var(--font-vazir), Tahoma, sans-serif;
+  font-weight: 700;
+  line-height: 1.55;
   margin: 0;
   text-wrap: balance;
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+input,
+textarea {
+  caret-color: var(--accent);
 }
 
 .display-num {
@@ -103,9 +121,8 @@ ul {
 }
 
 .eyebrow {
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
   color: var(--accent-ink);
   display: flex;
   align-items: center;
@@ -125,7 +142,7 @@ ul {
   align-items: center;
   gap: 8px;
   font-family: var(--font-vazir), sans-serif;
-  font-size: 0.92rem;
+  font-size: 0.9375rem;
   font-weight: 600;
   padding: 10px 22px;
   border-radius: 6px;
@@ -197,7 +214,7 @@ ul {
 }
 
 .brand .sub {
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   color: var(--ink-2);
   font-weight: 400;
 }
@@ -210,7 +227,7 @@ nav.menu {
 }
 
 nav.menu a {
-  font-size: 0.9rem;
+  font-size: 0.9375rem;
   font-weight: 500;
   color: var(--ink-2);
   transition: color 0.15s;
@@ -288,7 +305,7 @@ nav.menu a.active {
   nav.menu a {
     padding-block: 12px;
     border-bottom: 1px solid var(--line);
-    font-size: 0.95rem;
+    font-size: 0.9375rem;
   }
 
   nav.menu a:last-of-type {
@@ -331,9 +348,9 @@ nav.menu a.active {
 }
 
 .hero h1 {
-  font-size: clamp(1.9rem, 4.2vw, 3rem);
-  font-weight: 800;
-  line-height: 1.55;
+  font-size: clamp(2.1rem, 4.6vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.5;
   margin-block: 18px 20px;
 }
 
@@ -344,7 +361,7 @@ nav.menu a.active {
 
 .hero .lead {
   color: var(--ink-2);
-  font-size: 1.02rem;
+  font-size: 1.0625rem;
   max-width: 34rem;
   margin-block-end: 30px;
 }
@@ -357,7 +374,7 @@ nav.menu a.active {
 }
 
 .hero .note {
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   color: var(--ink-2);
   margin-block-start: 16px;
   display: flex;
@@ -374,7 +391,7 @@ nav.menu a.active {
   inset: 0;
   pointer-events: none;
   font-family: var(--font-estedad), sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--ink);
   opacity: 0.04;
   z-index: 0;
@@ -408,12 +425,12 @@ nav.menu a.active {
 
 .report .rhead b {
   font-family: var(--font-estedad), sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.9375rem;
   font-weight: 700;
 }
 
 .report .rhead span {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: var(--ink-2);
   flex: none;
 }
@@ -426,7 +443,7 @@ nav.menu a.active {
 
 .report td {
   padding-block: 9px;
-  font-size: 0.88rem;
+  font-size: 0.875rem;
   border-bottom: 1px dashed var(--line);
 }
 
@@ -458,7 +475,7 @@ nav.menu a.active {
 .chip {
   background: var(--ok-soft);
   color: var(--ok);
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 700;
   padding: 4px 14px;
   border-radius: 999px;
@@ -468,7 +485,7 @@ nav.menu a.active {
 }
 
 .report .verdict small {
-  font-size: 0.72rem;
+  font-size: 0.875rem;
   color: var(--ink-2);
 }
 
@@ -509,7 +526,7 @@ nav.menu a.active {
 .stat b {
   font-family: var(--font-estedad), sans-serif;
   font-size: 1.7rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--ink);
   display: block;
   line-height: 1.4;
@@ -517,7 +534,7 @@ nav.menu a.active {
 }
 
 .stat span {
-  font-size: 0.82rem;
+  font-size: 0.875rem;
   color: var(--ink-2);
 }
 
@@ -543,15 +560,15 @@ section.block {
 }
 
 .sec-head h2 {
-  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
-  font-weight: 800;
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  font-weight: 700;
   margin-block-start: 14px;
 }
 
 .sec-head p {
   color: var(--ink-2);
   margin-block-start: 10px;
-  font-size: 0.95rem;
+  font-size: 0.9375rem;
 }
 
 .sec-foot {
@@ -570,8 +587,8 @@ section.block {
 }
 
 .page-intro h1 {
-  font-size: clamp(1.6rem, 3.4vw, 2.3rem);
-  font-weight: 800;
+  font-size: clamp(1.9rem, 4vw, 2.75rem);
+  font-weight: 700;
   margin-block-start: 14px;
 }
 
@@ -625,18 +642,18 @@ a.svc {
 }
 
 .svc h3 {
-  font-size: 1.02rem;
+  font-size: 1.0625rem;
   font-weight: 700;
 }
 
 .svc p {
-  font-size: 0.86rem;
+  font-size: 0.875rem;
   color: var(--ink-2);
   flex: 1;
 }
 
 .svc .more {
-  font-size: 0.84rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: var(--accent-ink);
 }
@@ -678,7 +695,7 @@ a.svc {
 .step .no {
   font-family: var(--font-estedad), sans-serif;
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--accent);
   opacity: 0.85;
   line-height: 1;
@@ -688,13 +705,13 @@ a.svc {
 }
 
 .step h3 {
-  font-size: 0.95rem;
+  font-size: 0.9375rem;
   font-weight: 700;
   margin-block-end: 8px;
 }
 
 .step p {
-  font-size: 0.82rem;
+  font-size: 0.875rem;
   color: var(--ink-2);
 }
 
@@ -750,20 +767,20 @@ a.svc {
 .step-row .no {
   font-family: var(--font-estedad), sans-serif;
   font-size: 2.2rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--accent);
   line-height: 1;
   font-variant-numeric: tabular-nums;
 }
 
 .step-row h3 {
-  font-size: 1.05rem;
+  font-size: 1.0625rem;
   font-weight: 700;
   margin-block-end: 8px;
 }
 
 .step-row p {
-  font-size: 0.9rem;
+  font-size: 0.9375rem;
   color: var(--ink-2);
   max-width: 56ch;
 }
@@ -793,7 +810,7 @@ a.svc {
 }
 
 .why .item h3 {
-  font-size: 1.05rem;
+  font-size: 1.0625rem;
   font-weight: 700;
   margin-block-end: 10px;
   display: flex;
@@ -811,7 +828,7 @@ a.svc {
 }
 
 .why .item p {
-  font-size: 0.88rem;
+  font-size: 0.875rem;
   color: var(--band-muted);
 }
 
@@ -867,7 +884,7 @@ a.svc {
 
 .post .cat {
   align-self: flex-start;
-  font-size: 0.72rem;
+  font-size: 0.875rem;
   font-weight: 700;
   color: var(--accent-ink);
   background: var(--accent-soft);
@@ -876,19 +893,19 @@ a.svc {
 }
 
 .post h3 {
-  font-size: 0.98rem;
+  font-size: 0.9375rem;
   font-weight: 700;
   line-height: 1.7;
 }
 
 .post p {
-  font-size: 0.84rem;
+  font-size: 0.875rem;
   color: var(--ink-2);
   flex: 1;
 }
 
 .post time {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: var(--ink-2);
   font-variant-numeric: tabular-nums;
 }
@@ -915,19 +932,19 @@ a.svc {
 }
 
 .article h1 {
-  font-size: clamp(1.5rem, 3vw, 2.1rem);
-  font-weight: 800;
+  font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+  font-weight: 700;
   margin-block-end: 24px;
 }
 
 .article time {
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   color: var(--ink-2);
 }
 
 .article-body p {
   margin-block: 16px;
-  font-size: 0.97rem;
+  font-size: 0.9375rem;
   color: var(--ink);
 }
 
@@ -946,7 +963,7 @@ a.svc {
 }
 
 .article-body li {
-  font-size: 0.94rem;
+  font-size: 0.9375rem;
   color: var(--ink);
 }
 
@@ -967,7 +984,7 @@ a.svc {
 
 .faq-group h2 {
   font-size: 1.15rem;
-  font-weight: 800;
+  font-weight: 700;
   margin-block-end: 10px;
   color: var(--accent-ink);
 }
@@ -982,7 +999,7 @@ a.svc {
   padding-block: 18px;
   font-family: var(--font-vazir), sans-serif;
   font-weight: 700;
-  font-size: 0.97rem;
+  font-size: 0.9375rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1007,7 +1024,7 @@ a.svc {
 
 .faq details p {
   padding-block-end: 20px;
-  font-size: 0.9rem;
+  font-size: 0.9375rem;
   color: var(--ink-2);
   max-width: 60ch;
 }
@@ -1029,7 +1046,7 @@ a.svc {
 
 .cta-band h2 {
   font-size: clamp(1.25rem, 2.4vw, 1.6rem);
-  font-weight: 800;
+  font-weight: 700;
   max-width: 26em;
 }
 
@@ -1053,12 +1070,12 @@ a.svc {
 
 .svc-detail .intro p {
   margin-block: 14px;
-  font-size: 0.97rem;
+  font-size: 0.9375rem;
 }
 
 .svc-detail h2 {
   font-size: 1.2rem;
-  font-weight: 800;
+  font-weight: 700;
   margin-block: 40px 14px;
 }
 
@@ -1073,7 +1090,7 @@ a.svc {
   display: flex;
   align-items: baseline;
   gap: 12px;
-  font-size: 0.94rem;
+  font-size: 0.9375rem;
 }
 
 .check-list li svg {
@@ -1102,7 +1119,7 @@ a.svc {
   gap: 12px;
   padding-block: 14px;
   border-bottom: 1px solid var(--line);
-  font-size: 0.92rem;
+  font-size: 0.9375rem;
 }
 
 .contact-info .row svg {
@@ -1122,7 +1139,7 @@ a.svc {
 }
 
 .contact-form label {
-  font-size: 0.84rem;
+  font-size: 0.875rem;
   font-weight: 600;
   display: flex;
   flex-direction: column;
@@ -1132,7 +1149,7 @@ a.svc {
 .contact-form input,
 .contact-form textarea {
   font-family: var(--font-vazir), sans-serif;
-  font-size: 0.92rem;
+  font-size: 0.9375rem;
   padding: 10px 14px;
   border-radius: 6px;
   border: 1px solid var(--line);
@@ -1148,7 +1165,7 @@ a.svc {
 }
 
 .contact-form .hint {
-  font-size: 0.76rem;
+  font-size: 0.875rem;
   color: var(--ink-2);
 }
 
@@ -1179,7 +1196,7 @@ a.svc {
 }
 
 .value p {
-  font-size: 0.86rem;
+  font-size: 0.875rem;
   color: var(--ink-2);
 }
 
@@ -1195,7 +1212,7 @@ a.svc {
 
 .prose p {
   margin-block: 14px;
-  font-size: 0.97rem;
+  font-size: 0.9375rem;
 }
 
 /* footer */
@@ -1213,7 +1230,7 @@ a.svc {
 }
 
 .fgrid h4 {
-  font-size: 0.88rem;
+  font-size: 0.875rem;
   font-weight: 700;
   margin: 0 0 14px;
 }
@@ -1227,7 +1244,7 @@ a.svc {
 
 .fgrid a,
 .fgrid li {
-  font-size: 0.84rem;
+  font-size: 0.875rem;
   color: var(--ink-2);
 }
 
@@ -1236,7 +1253,7 @@ a.svc {
 }
 
 .fgrid .about {
-  font-size: 0.84rem;
+  font-size: 0.875rem;
   color: var(--ink-2);
   max-width: 30ch;
   margin-block-start: 12px;
@@ -1248,7 +1265,7 @@ a.svc {
 
 .legal {
   padding-block-start: 24px;
-  font-size: 0.78rem;
+  font-size: 0.875rem;
   color: var(--ink-2);
 }
 
@@ -1330,7 +1347,7 @@ a.svc {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 0.82rem;
+  font-size: 0.875rem;
   color: var(--ink-2);
 }
 
@@ -1363,13 +1380,13 @@ a.svc {
 
 .split-body h2 {
   font-size: clamp(1.3rem, 2.4vw, 1.7rem);
-  font-weight: 800;
+  font-weight: 700;
   margin-block: 12px 14px;
 }
 
 .split-body p {
   color: var(--ink-2);
-  font-size: 0.95rem;
+  font-size: 0.9375rem;
   margin-block-end: 12px;
   max-width: 54ch;
 }
@@ -1389,7 +1406,7 @@ a.svc {
 
 .std-group h2 {
   font-size: 1.15rem;
-  font-weight: 800;
+  font-weight: 700;
   margin-block-end: 10px;
   color: var(--accent-ink);
 }
@@ -1409,20 +1426,20 @@ a.svc {
 
 .std-row .no {
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--accent);
   line-height: 1.4;
   font-variant-numeric: tabular-nums;
 }
 
 .std-row h3 {
-  font-size: 0.98rem;
+  font-size: 0.9375rem;
   font-weight: 700;
   margin-block-end: 4px;
 }
 
 .std-row p {
-  font-size: 0.87rem;
+  font-size: 0.875rem;
   color: var(--ink-2);
   max-width: 58ch;
 }
@@ -1455,13 +1472,13 @@ a.svc {
 }
 
 .opinion h3 {
-  font-size: 0.98rem;
+  font-size: 0.9375rem;
   font-weight: 700;
   margin-block-end: 6px;
 }
 
 .opinion p {
-  font-size: 0.84rem;
+  font-size: 0.875rem;
   color: var(--ink-2);
 }
 

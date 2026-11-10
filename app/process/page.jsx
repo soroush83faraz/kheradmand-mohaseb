@@ -48,7 +48,6 @@ export default function ProcessPage() {
   return (
     <>
       <PageIntro
-        eyebrow="فرایند همکاری"
         title="شفاف از روز اول تا تحویل گزارش."
         lead="پنج مرحله مشخص، بدون ابهام و بدون هزینه پنهان — این مسیری است که هر پروژه در مؤسسه طی می‌کند."
       />
@@ -70,7 +69,6 @@ export default function ProcessPage() {
       <section className="block on-surface">
         <div className="wrap svc-detail">
           <Reveal className="sec-head">
-            <p className="eyebrow">آمادگی بیشتر، رسیدگی سریع‌تر</p>
             <h2>چه مدارکی لازم است؟</h2>
             <p>
               اگر این موارد آماده باشند، زمان و هزینه رسیدگی به‌طور محسوسی کم می‌شود.

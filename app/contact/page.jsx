@@ -16,7 +16,6 @@ export default function ContactPage() {
   return (
     <>
       <PageIntro
-        eyebrow="تماس با ما"
         title="گفت‌وگو را شروع کنیم."
         lead="فرم را پر کنید یا مستقیم تماس بگیرید — در کمتر از یک روز کاری پاسخ می‌دهیم و جلسه شناخت اولیه رایگان است."
       />

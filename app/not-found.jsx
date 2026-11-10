@@ -4,9 +4,6 @@ export default function NotFound() {
   return (
     <section className="block">
       <div className="wrap" style={{ textAlign: 'center', paddingBlock: 80 }}>
-        <p className="eyebrow" style={{ justifyContent: 'center' }}>
-          خطای ۴۰۴
-        </p>
         <h1 style={{ fontSize: '1.8rem', fontWeight: 800, marginBlock: 16 }}>
           چنین صفحه‌ای پیدا نشد.
         </h1>

@@ -41,7 +41,6 @@ export default function AboutPage() {
   return (
     <>
       <PageIntro
-        eyebrow="درباره مؤسسه"
         title="خردمند محاسب ارقام"
         lead="مؤسسه حسابرسی و خدمات مالی — تیمی که اعتقاد دارد پشت هر عدد درست، یک تصمیم خردمندانه است."
       />
@@ -74,7 +73,6 @@ export default function AboutPage() {
       <section className="block on-surface">
         <div className="wrap">
           <Reveal className="sec-head">
-            <p className="eyebrow">ارزش‌های ما</p>
             <h2>شش اصلی که با آن‌ها کار می‌کنیم.</h2>
           </Reveal>
           <div className="values">

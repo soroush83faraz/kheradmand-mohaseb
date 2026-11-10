@@ -25,7 +25,7 @@ export default async function ServicePage({ params }) {
 
   return (
     <>
-      <PageIntro eyebrow="خدمات مؤسسه" title={service.title} lead={service.lead} />
+      <PageIntro title={service.title} lead={service.lead} />
       <section className="block">
         <div className="wrap svc-detail">
           {serviceImages[service.slug] ? (
