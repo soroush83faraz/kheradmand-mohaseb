@@ -54,8 +54,12 @@ export default function ContactForm() {
         ارسال درخواست
       </button>
       <p className="hint">
-        با ارسال فرم، برنامه ایمیل شما با متن آماده باز می‌شود. می‌توانید مستقیم هم تماس
-        بگیرید: <span className="ltr-num">{site.phone}</span>
+        با ارسال فرم، برنامه ایمیل شما با متن آماده باز می‌شود.
+        {site.phone ? (
+          <>
+            {' '}می‌توانید مستقیم هم تماس بگیرید: <span className="ltr-num">{site.phone}</span>
+          </>
+        ) : null}
       </p>
     </form>
   );

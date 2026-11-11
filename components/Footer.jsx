@@ -54,9 +54,12 @@ export default function Footer() {
             <h4>تماس</h4>
             <ul>
               <li>{site.address}</li>
-              <li className="ltr-num">{site.phone}</li>
-              <li>{site.email}</li>
-              <li>{site.workHours}</li>
+              <li>
+                کد پستی: <span className="ltr-num">{site.postalCode}</span>
+              </li>
+              {site.phone ? <li className="ltr-num">{site.phone}</li> : null}
+              {site.email ? <li>{site.email}</li> : null}
+              {site.workHours ? <li>{site.workHours}</li> : null}
             </ul>
           </div>
         </div>

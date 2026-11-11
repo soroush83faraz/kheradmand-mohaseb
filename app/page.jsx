@@ -130,12 +130,8 @@ export default function Home() {
       <div className="stats">
         <div className="wrap">
           <Reveal className="stat">
-            <b className="display-num">۱۵+</b>
-            <span>سال تجربه حرفه‌ای</span>
-          </Reveal>
-          <Reveal className="stat">
-            <b className="display-num">۱۲۰+</b>
-            <span>شرکت و مؤسسه</span>
+            <b className="display-num">{site.foundedYear}</b>
+            <span>سال تأسیس مؤسسه</span>
           </Reveal>
           <Reveal className="stat">
             <b className="display-num">۴</b>

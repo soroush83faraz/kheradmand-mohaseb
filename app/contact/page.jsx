@@ -31,24 +31,34 @@ export default function ContactPage() {
               />
             </div>
             <div className="row">
-              <Icon name="phone" />
-              <span className="ltr-num">{site.phone}</span>
-            </div>
-            <div className="row">
-              <Icon name="mail" />
-              <span>{site.email}</span>
-            </div>
-            <div className="row">
               <Icon name="pin" />
-              <span>{site.address}</span>
+              <span>
+                {site.address}
+                <br />
+                کد پستی: <span className="ltr-num">{site.postalCode}</span>
+              </span>
             </div>
-            <div className="row">
-              <Icon name="clock" />
-              <span>{site.workHours}</span>
-            </div>
+            {site.phone ? (
+              <div className="row">
+                <Icon name="phone" />
+                <span className="ltr-num">{site.phone}</span>
+              </div>
+            ) : null}
+            {site.email ? (
+              <div className="row">
+                <Icon name="mail" />
+                <span>{site.email}</span>
+              </div>
+            ) : null}
+            {site.workHours ? (
+              <div className="row">
+                <Icon name="clock" />
+                <span>{site.workHours}</span>
+              </div>
+            ) : null}
           </Reveal>
           <Reveal>
-            <ContactForm />
+            {site.email ? <ContactForm /> : null}
           </Reveal>
         </div>
       </section>

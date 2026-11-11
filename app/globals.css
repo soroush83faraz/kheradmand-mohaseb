@@ -509,7 +509,7 @@ nav.menu a.active {
 
 .stats .wrap {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   padding-block: 30px;
 }
 
