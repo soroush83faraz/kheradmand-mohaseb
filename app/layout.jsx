@@ -1,10 +1,10 @@
-import { IBM_Plex_Sans_Arabic, Noto_Naskh_Arabic } from 'next/font/google';
+import { Vazirmatn, Noto_Naskh_Arabic } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { site } from '@/lib/site';
 import './globals.css';
 
-const plex = IBM_Plex_Sans_Arabic({
+const vazir = Vazirmatn({
   subsets: ['arabic'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-body',
@@ -30,7 +30,7 @@ const themeInit = `try{if(localStorage.getItem('kma-theme')==='dark')document.do
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fa" dir="rtl" className={`${plex.variable} ${naskh.variable}`}>
+    <html lang="fa" dir="rtl" className={`${vazir.variable} ${naskh.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
       </head>
